@@ -1,5 +1,5 @@
 # ESP32 Air Filter and Monitor
-![ESP32AirFilterPic](https://github.gatech.edu/user-attachments/assets/8eae9f55-8f2e-4c20-ab60-5aa176a9d885)
+<img width="2160" height="2880" alt="ESP32AirFilterPic (1)" src="https://github.com/user-attachments/assets/9915909a-748c-4199-995c-b214147d9786" />
 
 ## **Project Report**
 
@@ -42,13 +42,13 @@ Overall, this project successfully implements an ESP32-controlled smart air filt
 
 ## **Wiring Diagrams**
 
-<img width="681" height="315" alt="ece4180final_walldiagram drawio" src="https://github.gatech.edu/user-attachments/assets/01f04a91-c32e-4a1b-85bd-fbee857a5311" />
+<img width="681" height="315" alt="AirFilterWallPowerDiagram" src="https://github.com/user-attachments/assets/a91af10e-a892-4f6c-8f8b-96b3b342ef41" />
 <br>
 The diagram above shows how the system is powered from the wall outlet. As I said before, I separated the PC fans into 2 sets of 3 daisy chained together, because I didn't want to daisy chain all of them together. Starting from the wall outlet, I used an AC to DC plug and barrel jack to two terminal connector to separate the voltage and ground wire. Afterwards, took voltage wire and split it into 3 wires: two for the aforementioned fans, one leading to 12V to 5V buck converter for the ESP32 input voltage. All grounds in this chain are tied to a universal ground inside of a screw terminal bus bar. The breadboard/ESP32 logic is described in the next diagram:
 <br>
 <br>
 
-<img width="1100" height="671" alt="ece4180finalESP32Pinout drawio" src="https://github.gatech.edu/user-attachments/assets/629a0a8c-9d74-42c5-8a91-cf39c07c12bf" />
+<img width="1100" height="671" alt="AirFilterESP32PinoutDiagram" src="https://github.com/user-attachments/assets/15377f6a-f80a-4416-a495-1f70c18995e5" />
 <br>
 Diagram above shows the ESP32 pinout I used to connect all peripherals using the ESP32 and 2 breadboards. As for the power, the 3.3V power was supplied by the ESP32, the 5V power was used as the input for the MCU, and all grounds were tied to the screw terminal bus bar. For the peripherals, pins 4-5 are used for UART to the particle sensor, pin 6 is used for PWM to control the fan speed, pin 0 is used for digital input (input pullup) for the fan shut off button, pins 22-23 are used for I2C to the temp/humidity sensor, and finally pins 18-21 are used for SPI to the microSD card module. 
 <br>
