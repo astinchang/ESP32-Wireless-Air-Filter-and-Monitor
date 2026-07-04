@@ -64,3 +64,6 @@ The following libraries/APIs were used:
 - Adafruit_HDC302x: Adafruit library used to read temperature and humidity from the HDC3022 sensor.
 - SPI.h: Arduino SPI library used for communication with the microSD card module.
 - SD.h: Arduino SD card library used to create and append data to airlog.csv on the microSD card.
+
+## KiCAD Libraries Used
+- https://github.com/espressif/kicad-libraries
