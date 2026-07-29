@@ -11,7 +11,7 @@ The basic idea is that the ESP32 reads sensor data, decides how dirty the air is
 
 ### **Components and Their Purpose**
 
-- The main MCU for the project is the ESP32. It implements the basic features I need to get this project running: I2C, SPI, and UART communication, with WiFi and PWM capabilities. The ESP32 is also low power.
+- The main MCU for the project is the ESP32C6-DevKitC-1. It implements the basic features I need to get this project running: I2C, SPI, and UART communication, with WiFi and PWM capabilities. The ESP32 is also low power.
 - The PMS5003 particulate matter sensor measures the amount of particulate matter in the air. This component is polled to check air quality at the PM2.5 (particles <2.5um diameter) level, although it does estimate other particle sizes, useful for data reporting. We use this sensor to control the fans' PWM level.
 - The HDC3022 temperature and humidity sensor measures the surrounding temperature and humidity. This sensor really helps the node be a more complete source of information, because air quality readings can be affected by humidity. Also useful for more complete, environmental monitoring.
 - The PWM PC fans are used to pull air through the filter. They are controlled using PWM output from the ESP32. This is necessary for saving energy and making the air filter respond gradually to different air quality levels.
@@ -65,5 +65,13 @@ The following libraries/APIs were used:
 - SPI.h: Arduino SPI library used for communication with the microSD card module.
 - SD.h: Arduino SD card library used to create and append data to airlog.csv on the microSD card.
 
-## KiCAD Libraries Used
-- https://github.com/espressif/kicad-libraries
+## KiCAD Build
+*Implemented hardware designed above in dedicated PCB with slight differences (FIRST SOLO BUILD DON'T JUDGE LOL):
+- ESP32-C6-WROOM-1 microcontroller
+- USB-C programming through CP2102N
+- 5 V to 3.3 V regulation
+- I2C, SPI, and UART expansion headers
+<br>
+<img width="835" height="691" alt="image" src="https://github.com/user-attachments/assets/c4f4d555-60f0-48c0-a344-a557fffa9235" />
+<br>
+
