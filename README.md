@@ -72,10 +72,10 @@ The following libraries/APIs were used:
 - 5 V to 3.3 V regulation
 - I2C, SPI, and UART expansion headers
 <br>
-IF TRYING TO GET THIS TO WORK FROM MY FILES MAKE SURE TO DOWNLOAD THESE LIBRARIES:
-- 10171746-00021LF
-- ESD122DMYR
-- espressifLibraries
+IF TRYING TO GET THIS TO WORK FROM MY FILES MAKE SURE TO DOWNLOAD THESE LIBRARIES: <br>
+- 10171746-00021LF <br>
+- ESD122DMYR <br>
+- espressifLibraries <br>
 
 <br>
 <img width="835" height="691" alt="image" src="https://github.com/user-attachments/assets/c4f4d555-60f0-48c0-a344-a557fffa9235" />
